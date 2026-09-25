@@ -1,0 +1,5 @@
+id: audio
+name: Audio Test
+version: 1.0.0-dev.1
+entry-point: audio_app_main
+stack-size: 4096

@@ -1,0 +1,5 @@
+id: isojourn
+name: Isojourn FX
+version: 1.0.0
+entry-point: isojourn_main
+stack-size: 4096

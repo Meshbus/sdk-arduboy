@@ -1,0 +1,5 @@
+id: hello
+name: Hello Arduboy
+version: 0.1.0-dev.1
+entry-point: hello_app_main
+stack-size: 4096

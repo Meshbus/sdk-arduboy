@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "repository": "https://github.com/MLXXXp/Arduboy2",
+  "commit": "bc460a2cff1a3e116880991aa2f88bae4b2e3160",
+  "license": "BSD-3-Clause AND BSD-2-Clause",
+  "portions": [
+    {
+      "local": "include/meshbus_arduboy/font5x7.hpp",
+      "upstream": "src/Arduboy2Data.cpp",
+      "symbol": "Arduboy2::font5x7",
+      "transformation": "1280 font bytes unchanged; declaration and header wrapper adapted",
+      "data_sha256": "6bf4bf7f008551b58b8b9accbe7364326bbab519c04c5445151ce05853f8565a"
+    },
+    {
+      "local": "include/Arduboy2.h",
+      "upstream": "src/Arduboy2.cpp",
+      "symbol": "Arduboy2Base::drawCircle",
+      "transformation": "Function body retained in the SDK compatibility class"
+    }
+  ],
+  "reference_files": [
+    {
+      "path": "src/Arduboy2Data.cpp",
+      "size": 11999,
+      "sha256": "67187e521bcaaa23a62250bf4a17b4e93b168c8cdf5280bf9217973743082674"
+    },
+    {
+      "path": "src/Arduboy2.cpp",
+      "size": 33307,
+      "sha256": "e83b20f5f089ebde978178e2e37b37efbfba0d258a88393d762ebb1bcaa6d70e"
+    },
+    {
+      "path": "LICENSE.txt",
+      "size": 14561,
+      "sha256": "5b021be5c106fd555169f0c9ca9d7f7f930e3690d900c480d0de4b067130df71"
+    }
+  ],
+  "local_notices": {
+    "files": [
+      {
+        "identifier": "BSD-3-Clause",
+        "sha256": "a5fc7fe2e86c3fc514d826720cfeecf3badb5819f5bc9bcdbcf69dfc3f4bc09a",
+        "source": "https://raw.githubusercontent.com/MLXXXp/Arduboy2/bc460a2cff1a3e116880991aa2f88bae4b2e3160/LICENSE.txt",
+        "path": "LICENSES/BSD-3-Clause.txt"
+      },
+      {
+        "identifier": "BSD-2-Clause",
+        "sha256": "9036bb6bb88f8d1692b021304037b80044594edc4b943b3c79d044b3b249365a",
+        "source": "https://raw.githubusercontent.com/MLXXXp/Arduboy2/bc460a2cff1a3e116880991aa2f88bae4b2e3160/LICENSE.txt",
+        "path": "LICENSES/BSD-2-Clause.txt"
+      },
+      {
+        "identifier": "Apache-2.0",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+        "path": "LICENSES/Apache-2.0.txt"
+      }
+    ]
+  }
+}

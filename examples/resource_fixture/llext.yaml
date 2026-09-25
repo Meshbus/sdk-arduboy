@@ -1,0 +1,5 @@
+id: resource_fixture
+name: Resources
+version: 1.0.0
+entry-point: resource_fixture_main
+stack-size: 4096

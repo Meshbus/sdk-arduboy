@@ -1,0 +1,5 @@
+id: multitu
+name: Multi TU
+version: 1.0.0-dev.1
+entry-point: multitu_app_main
+stack-size: 4096

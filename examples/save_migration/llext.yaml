@@ -1,0 +1,5 @@
+id: save_migration
+name: Save Migration
+version: 1.0.0-dev.1
+entry-point: save_migration_app_main
+stack-size: 4096

@@ -1,0 +1,5 @@
+id: sketch_fixture
+name: Sketch Fixture
+version: 1.0.0-dev.1
+entry-point: sketch_fixture_app_main
+stack-size: 4096

@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "sdk_version": "0.2.0-dev.1",
+  "semantic_revision": 1,
+  "upstream_selectors": {
+    "Arduboy2": 50200,
+    "Arduboy": 10101
+  },
+  "selector_notice": "Selectors choose source branches; they do not certify full upstream compatibility.",
+  "capabilities": {
+    "clock": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "notes": "32-bit wrapping clocks, integer-ms frame periods and cancellable waits"
+    },
+    "input": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "notes": "held state, ordered queued edges, configurable long-exit gesture"
+    },
+    "display": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "notes": "128x64 VLSB snapshots and display(true) clear-after-submit"
+    },
+    "graphics": {
+      "status": "bounded",
+      "notes": "Documented Arduboy2 subset, basic geometry, bitmap/sprites and 5x7 text"
+    },
+    "avr_readers": {
+      "status": "implemented",
+      "notes": "unaligned LE numeric reads and native pointer reads are distinct"
+    },
+    "save": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "notes": "1024-byte EEPROM mirror, versioned envelope and explicit migrations"
+    },
+    "audio": {
+      "status": "bounded",
+      "requires_runtime": true,
+      "notes": "up to 32 frequency/duration notes; host availability and settings apply"
+    },
+    "multitu": {
+      "status": "implemented",
+      "notes": "independent C++ objects, COMDAT resolution and relocatable section merge"
+    },
+    "sketch": {
+      "status": "bounded",
+      "notes": "main then alphabetical ino/pde, simple free-function prototypes, diagnostics for complex declarations"
+    },
+    "gpio": {
+      "status": "unsupported",
+      "notes": "pinMode/digitalWrite/analogWrite have no device pin mapping"
+    },
+    "spi": {
+      "status": "unsupported",
+      "notes": "legacy transfer echo is a compatibility placeholder, not bus I/O"
+    },
+    "rgb": {
+      "status": "unsupported",
+      "notes": "per-game RGB LED ownership is not mapped"
+    },
+    "system_buttons": {
+      "status": "unsupported",
+      "notes": "AVR flashlight/system-button startup behavior is not mapped"
+    },
+    "audio_repeat": {
+      "status": "unsupported",
+      "notes": "TONES_REPEAT is rejected; no partial playback"
+    },
+    "audio_volume": {
+      "status": "unsupported",
+      "notes": "volumeMode is rejected; hardware duty is fixed"
+    },
+    "avr_score": {
+      "status": "bounded",
+      "requires_runtime": true,
+      "notes": "Explicit registered LegacyScoreWordV1 spans, channel0, rests and owned repeat; compatibility mode reduces two channels to mono"
+    },
+    "resources": {
+      "status": "bounded",
+      "requires_runtime": true,
+      "requires_resources": true,
+      "notes": "One read-only MARB v1 sidecar; 256-byte cache, bounded offsets, compiled identity/version/length/CRC32 and install SHA256."
+    },
+    "fx": {
+      "status": "bounded",
+      "requires_runtime": true,
+      "requires_resources": true,
+      "requires_fx": true,
+      "scope": "Read-only FXPK1 data, readDataArray, normal/masked bitmap; no save or raw SPI"
+    },
+    "managed_stop": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "requires_host_symbols": [
+        "mbs_desktop_app_stop_requested"
+      ],
+      "notes": "Cooperative CLI stop; returns through normal Sketch cleanup"
+    },
+    "relocatable_resources": {
+      "status": "implemented",
+      "requires_runtime": true,
+      "requires_resources": true,
+      "requires_host_symbols": [
+        "mbs_desktop_app_resource_path"
+      ],
+      "notes": "Resolve immutable sidecar beside the executing MBA version"
+    }
+  },
+  "legacy_degradations": {
+    "time": "Without RUNTIME, delay may be ignored and legacy nextFrame always accepts",
+    "audio": "Without RUNTIME, playing may return false and byte0 settings remain; with RUNTIME, two-channel old scores reduce to mono only in compatibility mode",
+    "spi_gpio_rgb": "no-op or echo placeholders; no physical hardware behavior",
+    "system": "flashlight/systemButtons/idle/LCD commands are no-ops",
+    "text": "legacy base write consumes without drawing; games may override it",
+    "data": "Arduino byte is 8 bits; pinned old score words use explicit LegacyScoreWordV1; pointer-word overloads remain source-specific"
+  },
+  "evidence_document": "docs/testing.md"
+}

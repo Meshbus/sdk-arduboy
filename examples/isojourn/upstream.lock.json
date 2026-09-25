@@ -1,0 +1,51 @@
+{
+  "game": {
+    "repository": "https://github.com/pmwasson/isojourn",
+    "commit": "1cfc136cd03a82561983da989386192821018d4f",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "Controls.cpp",
+        "size": 1255,
+        "sha256": "c3f4d5b1d1de70c2724bc4f441d82c2567d56dcaf8e8145fec701bc7972597d2",
+        "unchanged": true
+      },
+      {
+        "path": "Controls.h",
+        "size": 298,
+        "sha256": "c7a08e2825a069f1a1084a0f70b074119a7531cac34b87074a5f474d0ce9dae5",
+        "unchanged": true
+      },
+      {
+        "path": "LICENSE",
+        "size": 1065,
+        "sha256": "864c904bfec6c6610ba9f00152f6b8da7d7cc48275dafeeeac8b430b6f02e4b2",
+        "unchanged": true
+      },
+      {
+        "path": "data.bin",
+        "size": 82224,
+        "sha256": "6384d8a2cd7be99c2ba5af8af4fafed04efa0e459f8a4ad92c51f076ca150e03",
+        "unchanged": true
+      },
+      {
+        "path": "data.h",
+        "size": 7213,
+        "sha256": "40d918451760eb101558a136df2c8ef60f0c4b912af684631c576142b4be3d2c",
+        "unchanged": true
+      },
+      {
+        "path": "isojourn.ino",
+        "size": 4113,
+        "sha256": "5e3dc62f813508f1a8ca1e5ec91d7d1eea124a3207f9d1bd081a928756ef3cb7",
+        "unchanged": true
+      }
+    ]
+  },
+  "fx_reference": {
+    "repository": "https://github.com/MrBlinky/ArduboyFX",
+    "commit": "4d0270dd415ce459d3f79305a9733e9f73c05bf9",
+    "license": "CC0",
+    "implementation": "SDK bounded adapter; upstream AVR library is not linked"
+  }
+}

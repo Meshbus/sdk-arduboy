@@ -1,0 +1,5 @@
+id: timing
+name: Runtime Timing
+version: 1.0.0-dev.1
+entry-point: timing_app_main
+stack-size: 4096
